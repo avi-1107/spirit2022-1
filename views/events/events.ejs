@@ -22,6 +22,7 @@
         flex-wrap: wrap;
         margin: 5%;
         margin-top: 2%;
+        justify-content: space-evenly;
         /* margin-left: 10%;
         margin-right: 10%;
         padding-right: 5%;
@@ -30,9 +31,11 @@
 
     .mycard {
         margin: 5%;
-        margin-right: 0%;
+        /* margin-right: 0%; */
         flex-direction: column;
-        flex: 25%;
+        flex: 1 1 1;
+        flex-wrap: wrap;
+
         /* border-radius: 8%; */
     }
 
@@ -82,6 +85,7 @@
             margin: 5%;
             margin-right: 0%;
             flex-direction: column;
+            flex: 1 1 0;
             flex: 50%;
             border-color: white !important;
             /* border-radius: 8%; */
@@ -95,7 +99,7 @@
             margin: 5%;
             margin-right: 0%;
             flex-direction: column;
-            flex: 33.33%;
+            flex: 1 1 1;
             /* border-radius: 8%; */
             box-shadow: 0px 5px 10px grey;
         }
@@ -146,6 +150,38 @@
         <div class="heading">Events</div>
     </div>
         <div class="eventDetails">
+            <div class="card mycard" style="width: 18rem">
+                <img class="card-img-top"
+                    src="images/coming-soon.jpg"
+                    style="object-fit: contain" alt="Card image cap" />
+                <div class="card-body">
+                    <p class="date">13/10/2022</p>
+                    <h5 class="card-title">Coming Soon</h5>
+                    <p class="card-text">
+                        Coming Soon
+                    </p>
+                </div>
+                <div class="card-body">
+                    <a href="/events" class="card-link">Read More &#8594</a>
+                </div>
+            </div>
+
+            <div class="card mycard" style="width: 18rem">
+                <img class="card-img-top"
+                    src="images/coming-soon.jpg"
+                    style="object-fit: contain" alt="Card image cap" />
+                <div class="card-body">
+                    <p class="date">13/10/2022</p>
+                    <h5 class="card-title">Coming Soon</h5>
+                    <p class="card-text">
+                        Coming Soon
+                    </p>
+                </div>
+                <div class="card-body">
+                    <a href="/events" class="card-link">Read More &#8594</a>
+                </div>
+            </div>
+
             <div class="card mycard" style="width: 18rem">
                 <img class="card-img-top"
                     src="images/coming-soon.jpg"

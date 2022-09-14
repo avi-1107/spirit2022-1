@@ -112,7 +112,7 @@
     margin-right: 3%;
     margin-left: 10%;
     margin-bottom: 15%;
-    line-height: 0%;
+    /* line-height: 0%; */
   }
 
   .cont2>h1 {
@@ -315,6 +315,7 @@
     height: 8vh;
     border-color: rgb(141, 127, 106);
     border-width: 1px;
+    padding-left: 4%;
   }
 
   #msgBox {
@@ -358,7 +359,7 @@
   }
 
   #success {
-    /* margin: 2%; */
+    margin: 2%;
     padding: 1%;
     display: flex;
     justify-content: center;
@@ -418,7 +419,7 @@
       color: #11002c;
       text-decoration: none !important;
     }
-    .TextBox {
+  .TextBox {
   
   /* margin-left: 2%; */
   padding: 0 20px;
@@ -432,6 +433,7 @@
   border-color: rgb(141, 127, 106);
   border-width: 1px;
 }
+
 #msgBox {
   
   /* margin-left: 2%; */
@@ -486,7 +488,8 @@
   /* color: #11002C; */
 
 }
-    @media only screen and (max-width:980px) {
+  }
+   @media only screen and (max-width:980px) {
       .cont{
         display: flex;
         flex-direction: column;
@@ -511,7 +514,7 @@
       margin-right: 2%;
       margin-left: 0%;
       margin-bottom: 15%;
-      line-height: 0%;
+      /* line-height: 0%; */
     }
 
     .c1 {
@@ -605,7 +608,7 @@
           <!-- <div style="color:green;" class="register-partition" id="success">
                 success
         </div> -->
-          <div class="cardd">
+          <!-- /* <div class="cardd">
             <h6>Name</h6>
             
             <input type="email" name="email" style="font-size: 15px;font-weight: 400;" id="NAME"
@@ -638,37 +641,37 @@
               <button type="button" class="btn btn-primary btn-block " id="button2">
                 Register with Google
               </button>
-            
+             */ -->
 
 
           <form>
-            <div style="color:green;" class="register-partition" id="success">
-              
+            <div style="color:green;" class="register-partition">
+              <p  id="success"></p>
             </div>
             <div class="cardd">
               <h6>Name</h6>
 
               <input type="email" name="email" style="font-size: 15px;font-weight: 400;" id="NAME"
-                placeholder="  Enter your name" class="TextBox">
+                placeholder="Enter your name" class="TextBox">
             </div>
             <div class="cardd">
               <h6>Email</h6>
 
 
               <input type="email" name="email" style="font-size: 15px;font-weight: 400;" id="mail"
-                placeholder=" Enter your email" class="TextBox">
+                placeholder="Enter your email" class="TextBox">
             </div>
             <div class="cardd">
               <h6>Password</h6>
 
               <input type="password" name="email" style="font-size: 15px;font-weight: 400;" id="PASS"
-                placeholder="  Enter your password" class="TextBox">
+                placeholder="Enter your password" class="TextBox">
             </div>
             <div class="cardd">
               <h6>Contact Number</h6>
 
               <input type="tel" name="email" style="font-size: 15px;font-weight: 400;" id="PHN"
-                placeholder="  Enter your phone number" class="TextBox">
+                placeholder="Enter your phone number" class="TextBox">
             </div>
             <div class="mbutton">
               <a type="submit" class="btn btn-primary btn-lg active buttonlogin" role="button" aria-pressed="true"
@@ -683,25 +686,28 @@
             </div>
           </form>
           
-            <div class="register-with-cont" >
+            <div class="register-with-cont bttns" >
             <button type="button" class="btn btn-primary btn-block customGPlusSignIn auth" id="button2">
               Register with Google
             </button>
 
           </div>
           
-          <a href="login" class="myanchortag">Already have an account? Login.</a>
-        </div>
+          <a href="login" class="myanchortag">
+            Already have an account? Login.</a>
+      </div>
       </div>
     </div>
+    </div>
     <%- include('../footer') -%>
+    
 </body>
 <script>
 
   //     let show_pass_status = false;
   //      document.getElementById("show_pass").addEventListener('click', show_pass)
   //     let show_pass_checkbox =document.getElementById("show_pass");
-
+  
   // function show_pass(){
   //     if(show_pass_status === false){
   //         document.getElementById('Passwordenter').type= "text";
@@ -715,15 +721,15 @@
   //         show_pass_status = false;
   //     }   
   // }
-
-
+  
+  
   // var remember=document.getElementById("Remember");
   // function rem(){remember.innerHTML="✓";}
-
-
+  
+  
   const form = document.getElementById('register')
   form.addEventListener('click', signupemail)
-
+  
   async function signupemail(event) {
     event.preventDefault()
     const email = document.getElementById('mail').value
@@ -733,7 +739,7 @@
     const username = document.getElementById('NAME').value
     const provider = "email";
     if (email && password && phno && collegename && username) {
-
+  
     }
     else {
       document.getElementById("errors").innerHTML = "Fields are empty"
@@ -752,17 +758,17 @@
         phno
       })
     }).then((res) => res.json())
-
+  
     if (result.status === 'ok') {
-
-
+  
+  
       document.getElementById("success").innerHTML = 'Success. Check your mail and activate your account'
-
+  
     } else {
       document.getElementById("errors").innerHTML = result.error
     }
   }
-
+  
   //calling register apis to register using google
   async function registergoogle(googleUser) {
     var profile = googleUser.getBasicProfile();
@@ -783,14 +789,14 @@
         provider
       })
     }).then((res) => res.json())
-
+  
     if (result.status === 'ok') {
       var auth2 = gapi.auth2.getAuthInstance();
       auth2.signOut()
       //window.location.replace(`/profile/get/${result.data._id}`);
-
+  
       document.getElementById("success").innerHTML = 'Success. Check your mail and activate your account'
-
+  
     } else {
       var auth2 = gapi.auth2.getAuthInstance();
       auth2.signOut()
@@ -798,10 +804,10 @@
       document.getElementById("errors").innerHTML = result.error
     }
   }
-
-
+  
+  
   var googleid = "<%= google_id %>";
-
+  
   //google-signup  
   var googleUser = {};
   var startApp = function () {
@@ -816,11 +822,11 @@
         //scope: 'additional_scope'
       });
       console.log("startapp hit");
-
+  
       attachSignin(document.getElementById('button2'));
     });
   }
-
+  
   function attachSignin(element) {
     console.log(element.id);
     auth2.attachClickHandler(element, {},
@@ -833,4 +839,5 @@
       });
   }
   startApp()
-</script>
+  </script>
+</html>
