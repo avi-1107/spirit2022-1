@@ -79,7 +79,3 @@ $ npm run build   // this will build the server code to es5 js codes and generat
 ### About Us Page
 
 ![image](https://user-images.githubusercontent.com/66035321/139846723-4634e331-9060-4060-9ff6-637ce62650ef.png)
-
-### Restricted Pages of the website redirects to login page if the user is not logged in
-
-![image](https://user-images.githubusercontent.com/66035321/139846846-3b662bc5-201f-43b1-9289-1cc8b35397f4.png)
